@@ -1,0 +1,10 @@
+<div *ngIf="message" [ngClass]="{ 'alert': message, 'alert-success': message.type === 'success', 'alert-danger': message.type === 'error' }"><h3>{{message.text}}</h3></div>
+
+<!-- <div  *ngIf="message"id="myModal" class="modal">
+  <div class="modal-content" [ngClass]="{ 'alert': message, 'alert-success': message.type === 'success', 'alert-danger': message.type
+    === 'error' }">
+    <span class="close">&times;</span>
+    {{message.text}}
+  </div>
+
+</div> -->

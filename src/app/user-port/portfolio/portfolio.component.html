@@ -1,0 +1,41 @@
+<hr>
+<div class="portfolio">
+  <div class="numbers">
+    <h4>Total Value: ${{value | number: '1.2-2'}}</h4>
+  </div>
+  <table class="responsive-table highlight bordered">
+    <thead>
+      <tr>
+        <th>Ranking</th>
+        <th>Cryptocurrency</th>
+        <th>Image</th>
+        <th>Symbol</th>
+        <th>Quantity</th>
+        <th>Current Price</th>
+        <th>Original Value</th>
+        <th>Market Value</th>
+        <th>Gains/Losses ($)</th>
+        <th>Gains/Losses (%)</th>
+        <th>% of Portfolio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let portfolio of portfolios">
+        <td>{{portfolio.currency.order}}</td>
+        <td>{{portfolio.currency.name}}</td>
+        <td>
+          <img src="{{portfolio.currency.imageUrl}}" alt="">
+        </td>
+        <td>{{portfolio.currency.symbol}}</td>
+        <td>{{portfolio.amount}}</td>
+        <td *ngIf="portfolio.currency.price > 1">${{portfolio.currency.price | number : '1.2-2'}}</td>
+        <td *ngIf="portfolio.currency.price < 1">${{portfolio.currency.price | number : '1.2-6'}}</td>
+        <td>${{portfolio.purchasedPrice | number : '1.2-2'}}</td>
+        <td>${{portfolio.currency.marketValue | number : '1.2-2'}}</td>
+        <td>${{portfolio.currency.marketValue - portfolio.purchasedPrice | number : '1.2-2'}}</td>
+        <td>{{(portfolio.currency.marketValue - portfolio.purchasedPrice)/portfolio.purchasedPrice | number : '1.2-2'}}%</td>
+        <td>{{portfolio.currency.marketValue/value * 100 | number : '1.2-2'}}%</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

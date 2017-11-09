@@ -1,0 +1,23 @@
+div {
+  width: 5vw;
+  min-width: 100px;
+  background-color: #1B1B1E;
+
+  height: 100vh;
+  opacity: 0.8;
+  /* z-index: 5; */
+}
+p {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    font-size: 11px;
+    color: white;
+}
+
+i {
+  color: white;
+  opacity: 0.5;
+}
+

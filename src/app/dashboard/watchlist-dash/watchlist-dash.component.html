@@ -1,0 +1,32 @@
+<div class="watchlist">
+  <h4>Watchlist</h4>
+  <div class="tracking">
+    <table class="responsive-table highlight bordered">
+      <thead>
+        <tr>
+          <th>Ranking</th>
+          <th>Cryptocurrency</th>
+          <th>Image</th>
+          <th>Current Price</th>
+          <th>Market Cap</th>
+          <th>24hr change ($)</th>
+          <th>24hr change (%)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tracking of trackings">
+          <td>{{tracking.order}}</td>
+          <td>{{tracking.name}}</td>
+          <td>
+            <img src="{{tracking.imageUrl}}" alt="">
+          </td>
+          <td>$298.36</td>
+          <td>$2501.19</td>
+          <td>$3,135.30</td>
+          <td>$3,135.30</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>

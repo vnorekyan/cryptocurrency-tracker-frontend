@@ -1,0 +1,45 @@
+<div class="sell">
+  <h3>Sell Cryptocurrency</h3>
+  <div>
+    <h4>Account Balance: ${{balance}}</h4>
+  </div>
+  <div class="form">
+    <form (ngSubmit)="sellCrypto()" #userForm="ngForm" class="col s12 grey lighten-3">
+      <div class="row">
+ 
+
+        <div class="input-field col s6">
+          <input autocomplete="off" #searchBox [(ngModel)]="cryptoName" (focus)="clickedInput()" (keyup)="search(searchBox.value)"
+            name="cryptocurrency" id="cryptocurrency" type="text" class="search-box validate">
+          <label for="cryptocurrency">Cryptocurrency</label>
+          <ul *ngIf="clicked" class="search-result">
+            <li (click)="update(cryptocurrency.currency[0].name, cryptocurrency.currency[0].symbol, cryptocurrency.currency[0].id, cryptocurrency.amount)" *ngFor="let cryptocurrency of cryptocurrencies | async">
+              {{cryptocurrency.currency[0].name}}
+            </li>
+          </ul>
+        </div>
+        <div class="input-field col s6">
+          <input disabled value="" name="price" id="price" [(ngModel)]="price" type="text" class="validate">
+          <label class="active" for="price">Price</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input #quantityBox (keyup)="updateValue(quantityBox.value)" value="" name="quantity" id="quantity" [(ngModel)]="model.quantity"
+            #quantity="ngModel" type="text" class="validate">
+          <label class="active" for="quantity">Quantity</label>
+        </div>
+        <div class="input-field col s6">
+          <input disabled value="" [(ngModel)]="crypto.value" name="value" id="value" type="text" [(ngModel)]="model.value" #value="ngModel"
+            class="validate">
+          <label class="active" for="value">Total Value</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s10"></div>
+        <input type="submit" class="light-blue darken-3 waves-effect waves-light btn" value="Sell">
+      </div>
+    </form>
+  </div>
+
+</div>

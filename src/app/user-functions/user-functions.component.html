@@ -1,0 +1,11 @@
+<h2>{{title}}</h2>
+<hr>
+
+<div class="data_content">
+  <div class="tab">
+    <button class="tablinks" [routerLink]="['buy']" routerLinkActive="active"> Buy</button>
+    <button class="tablinks" [routerLink]="['sell']" routerLinkActive="active">Sell</button>
+    <button class="tablinks" [routerLink]="['watch']" routerLinkActive="active">Watch</button>
+  </div>
+  <router-outlet></router-outlet>
+</div>

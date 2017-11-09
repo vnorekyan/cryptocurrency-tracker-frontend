@@ -1,0 +1,35 @@
+<hr>
+<div class="tracking">
+  <table class="responsive-table highlight bordered">
+    <thead>
+      <tr>
+        <th>Ranking</th>
+        <th>Cryptocurrency</th>
+        <th>Image</th>
+        <th>Symbol</th>
+        <th>Current Price</th>
+        <th>Market Cap</th>
+        <th>24hr change ($)</th>
+        <th>24hr change (%)</th>
+        <th>Untrack</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tracking of trackings">
+        <td>{{tracking.order}}</td>
+        <td>{{tracking.name}}</td>
+        <td>
+          <img src="{{tracking.imageUrl}}" alt="">
+        </td>
+        <td>{{tracking.symbol}}</td>
+        <td *ngIf="tracking.price >= 1">${{tracking.price | number : '1.2-2'}}</td>
+        <td *ngIf="tracking.price < 1">${{tracking.price | number : '1.2-6'}}</td>
+        <td>${{tracking.marketValue | number : '1.2-2'}}</td>
+        <td>${{ tracking.changeVal | number : '1.2-2'}}</td>
+        <td>{{ tracking.changePerc | number : '1.2-2'}}%</td>
+        <td><button (click)="untrackCrypto(tracking.id)" class="red lighten-1 waves-effect waves-light btn">Untrack</button></td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

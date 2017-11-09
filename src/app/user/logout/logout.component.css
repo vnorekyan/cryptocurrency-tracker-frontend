@@ -1,0 +1,17 @@
+.create-account {
+  margin-top: 50px;
+}
+
+a {
+  margin: 30px;
+}
+
+.logout {
+  background-color: white;
+  padding: 15px;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 70%;
+  opacity: 0.8;
+}
+

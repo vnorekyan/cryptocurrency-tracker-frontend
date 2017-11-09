@@ -1,0 +1,16 @@
+a {
+  margin: 30px;
+}
+
+.profile {
+  background-color: white;
+  padding: 15px;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 80%;
+  opacity: 0.8;
+}
+
+.delete {
+  margin-top: 50px;
+}

@@ -1,0 +1,41 @@
+<h2>Create a New Account</h2>
+<hr>
+
+<div class="signup">
+  <div class="row">
+    <form (ngSubmit)="signup()" #userForm="ngForm" class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input  name="first_name" id="first_name" type="text" [(ngModel)]="model.firstName" #firstName="ngModel" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" name="last_name" type="text" [(ngModel)]="model.lastName" #lastName="ngModel" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input  value="" name="email" id="email" type="email" [(ngModel)]="model.email" #email="ngModel" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" name="password" type="password" [(ngModel)]="model.password" #password="ngModel" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Set the initial amount of money you would like to start investing." [(ngModel)]="model.balance" #balance="ngModel" id="balance" name="balance" type="text" class="validate">
+          <label class="active" for="balance">Initial Account Balance ($)</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s5"></div>
+        <input type="submit" value="Create Account" class="blue submit-btn waves-effect waves-light btn">
+      </div>
+    </form>
+  </div>
+</div>

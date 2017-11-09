@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="input-field col s6">
+    <input autocomplete="off" #searchBox [(ngModel)]="cryptoName" (focus)="clickedInput()" (keyup)="search(searchBox.value)" name="cryptocurrency" id="cryptocurrency"
+      type="text" class="search-box validate">
+    <label for="cryptocurrency">Cryptocurrency</label>
+      <ul *ngIf="clicked" class="search-result">
+        <li (click)="update(cryptocurrency.name, cryptocurrency.symbol)" *ngFor="let cryptocurrency of cryptocurrencies | async">
+           {{cryptocurrency.name}}
+        </li>
+      </ul>
+  </div>
+  <div class="input-field col s6">
+    <input disabled value="" name="price" id="price" [(ngModel)]="price" type="text" class="active validate">
+    
+  </div>
+</div>

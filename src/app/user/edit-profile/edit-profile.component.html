@@ -1,0 +1,46 @@
+<h2>Edit {{username}} Profile</h2>
+<hr>
+
+<div class="profile">
+  <div class="row">
+    <form #userForm="ngForm" (ngSubmit)="editProfile()" class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input name="first_name" id="first_name" [(ngModel)]="model.firstName" #firstName="ngModel" type="text" class="validate" value="{{userInfo.first_name}}" >
+          <label class="active" for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" name="last_name" type="text" class="validate" [(ngModel)]="model.lastName" #lastName="ngModel"  value="{{userInfo.last_name}}">
+          <label class="active" for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input value="" name="email" id="email" type="email" [(ngModel)]="model.email" #email="ngModel" class="validate" value="{{userInfo.email}}">
+          <label class="active" for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" name="password" type="password" class="validate" [(ngModel)]="model.password" #password="ngModel" value="{{userInfo.password}}">
+          <label class="active" for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="balance" name="balance" type="text" class="validate" [(ngModel)]="model.balance" #balance="ngModel" value="{{userInfo.balance}}">
+          <label class="active" for="balance"> Account Balance ($)</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s5"></div>
+        <input type="submit" value="Submit" class="blue submit-btn waves-effect waves-light btn">
+      </div>
+    </form>
+  </div>
+</div>
+<div class="row delete">
+  <div class="col s5"></div>
+  <form action=""></form>
+  <input type="submit" (click) = "deleteProfile()" value="Delete Profile" class="red delete-btn waves-effect waves-light btn">
+</div>

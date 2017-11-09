@@ -1,0 +1,34 @@
+<div class="dash">
+  <h4>Portfolio</h4>
+  <div class="numbers">
+    <h5>Total Value: ${{value| number: '1.2-2'}}</h5>
+  </div>
+  <table class="responsive-table highlight bordered">
+    <thead>
+      <tr>
+
+        <th>Symbol</th>
+        <th>Image</th>
+        <th>Quantity</th>
+        <th>Original Value</th>
+        <th>Market Value</th>
+        <th>Gains/Losses ($)</th>
+        <th>Gains/Losses (%)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let portfolio of portfolios">
+        <td>{{portfolio.currency.symbol}}</td>
+          <td>
+            <img src="{{portfolio.currency.imageUrl}}" alt="">
+          </td>
+        <td>{{portfolio.amount}}</td>
+        <td>${{portfolio.purchasedPrice | number : '1.2-2'}}</td>
+        <td>${{portfolio.currency.marketValue | number : '1.2-2'}}</td>
+        <td>${{portfolio.currency.marketValue - portfolio.purchasedPrice | number : '1.2-2'}}</td>
+        <td>{{(portfolio.currency.marketValue - portfolio.purchasedPrice)/portfolio.purchasedPrice | number : '1.2-2'}}%</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

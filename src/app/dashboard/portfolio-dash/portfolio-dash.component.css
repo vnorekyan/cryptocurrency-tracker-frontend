@@ -1,0 +1,28 @@
+.dash {
+  /* float: right; */
+  position: absolute;
+  right: 0px;
+  /* width: 48%; */
+  width: calc(50% - 5px);
+  /* height: 47%; */
+  height: 100%;
+  background-color: white;
+  /* margin: 10px; */
+  /* margin-right: 20px; */
+  border: 2px black solid;
+  padding: 10px;
+  overflow: scroll;
+}
+
+.numbers {
+  text-align: center;
+}
+
+h4 {
+  font-weight: bold;
+}
+
+img {
+  height: 25px;
+  width: 25px;
+}

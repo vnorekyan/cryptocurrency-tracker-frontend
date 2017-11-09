@@ -1,0 +1,28 @@
+<h2>Transactions</h2>
+<hr>
+
+<div class="transactions">
+  <table class="responsive-table highlight bordered">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Buy/Sell</th>
+        <th>Cryptocurrency</th>
+        <th>Quantity</th>
+        <th>Purchase Price</th>
+        <th>Transaction Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of transactions">
+        <td>{{transaction.createdAt | date: 'MM/dd/yyyy'}}</td>
+        <td>{{transaction.buy ? 'Buy' : 'Sell'}}</td>
+        <td>{{transaction.currency}}</td>
+        <td>{{transaction.quantity}}</td>
+        <td>${{transaction.price | number : '1.2-2'}}</td>
+        <td>${{transaction.price * transaction.quantity | number : '1.2-2'}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>

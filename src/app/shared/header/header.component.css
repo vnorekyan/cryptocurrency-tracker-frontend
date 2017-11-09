@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+div {
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(99, 107, 126);
+
+
+
+  margin-left: 100px;
+  min-height: 90px;
+  height: 8vh;
+  /* margin-left: 5vw; */
+  margin-bottom: 0;
+}
+
+h1 {
+  /* font-family: Roboto; */
+  /* font-weight: bold; */
+  /* text-align: center; */
+  /* font-family: 'Inconsolata', monospace; */
+  font-family: 'Share Tech Mono', monospace;
+  font-weight: bold;
+  font-size: 50px;
+  text-shadow: 0 5px .1em rgba(0, 0, 0, 0.2);
+  /* font-family: 'VT323', monospace; */
+}

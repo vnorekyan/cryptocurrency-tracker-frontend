@@ -1,0 +1,35 @@
+<div class="data">
+    <h4>Current Cryptocurrency Market</h4>
+
+<div class="data_content">
+    <table class="responsive-table highlight bordered">
+        <thead>
+            <tr>
+            <th>Ranking</th>
+            <th>Image</th>
+            <th>Cryptocurrency</th>
+            <th>Symbol</th>
+            <th>Price</th>
+            <th>Market Value</th>
+            <th>$ Change</th>
+            <th>% Change</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let crypto of cryptos">
+                <td>{{crypto.order}}</td>
+                <td>
+                    <img src="{{crypto.imageUrl}}" alt="">
+                </td>
+                <td>{{crypto.name}}</td>
+                <td>{{crypto.symbol}}</td>
+                <td *ngIf="crypto.price > 1">${{crypto.price | number : '1.2-2'}}</td>
+                <td *ngIf="crypto.price < 1">${{crypto.price | number : '1.2-6'}}</td>
+                <td>${{crypto.marketValue | number : '1.2-2'}}</td>
+                <td>${{ crypto.changeVal | number : '1.2-2'}}</td>
+                <td>{{ crypto.changePerc | number : '1.2-2'}}%</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>

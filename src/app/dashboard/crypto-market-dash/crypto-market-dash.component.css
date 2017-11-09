@@ -1,0 +1,19 @@
+.data {
+  /* width: 98%; */
+  width: 100%;
+  padding: 10px;
+  height: 49%;
+  background-color: white;
+  /* margin: 10px auto; */
+  border: 2px black solid;
+  overflow: scroll;
+}
+
+img {
+  height: 25px;
+  width: 25px;
+}
+
+h4 {
+  font-weight: bold;
+}

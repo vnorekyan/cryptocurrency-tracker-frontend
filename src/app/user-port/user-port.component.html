@@ -1,0 +1,10 @@
+<h2>{{title}}</h2>
+<hr>
+
+<div class="data_content">
+  <div class="tab">
+    <button class="tablinks" [routerLink]="['portfolio']" routerLinkActive="active"> Portfolio</button>
+    <button class="tablinks" [routerLink]="['tracking']" routerLinkActive="active">Watchlist</button>
+  </div>
+  <router-outlet></router-outlet>
+</div>
