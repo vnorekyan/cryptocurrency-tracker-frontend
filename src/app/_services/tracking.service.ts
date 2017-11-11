@@ -25,6 +25,7 @@ export class TrackingService {
   }
 
   getCryptoDataForTracking(trackingData) {
+    console.log('Tracking:', trackingData[0]);
     for (let i = 0; i < trackingData.length; i++) {
       this.http.get(`https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${trackingData[i].symbol}&tsyms=USD`).map(response => response.json())
         .subscribe(data => {
