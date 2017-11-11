@@ -14,9 +14,10 @@ export class CryptoMarketComponent implements OnInit {
   cryptos: any = [];
   initialPrices: number[];
 
-  constructor(private alertService: AlertService, private trackingService: TrackingService, private cryptocurrencyService: CryptocurrencyService, private router: Router) {
-
-  }
+  constructor(private alertService: AlertService, 
+    private trackingService: TrackingService, 
+    private cryptocurrencyService: CryptocurrencyService, 
+    private router: Router) {}
 
   getCryptocurrency() {
     this.cryptocurrencyService.getCrypto()

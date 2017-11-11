@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { APP_BASE_HREF } from '@angular/common';
 
+
+//Modules
 import { UserFunctionsModule } from './user-functions/user-functions.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { AppRoutingModule } from './app-routing/app-routing.module';
@@ -14,18 +16,17 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { NavComponent } from './shared/nav/nav.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import {}
 
 //User components
 import { LoginComponent } from './user/login/login.component';
 import { UserProfileComponent } from './user/user-profile/user-profile.component';
 import { CreateUserComponent } from './user/create-user/create-user.component';
 import { EditProfileComponent } from './user/edit-profile/edit-profile.component';
-import { UserService } from './_services/user.service';
-
-import { CryptoSearchService } from './_services/crypto-search.service';
+import { UserService,  } from './_services/index';
 
 import { TransactionsComponent } from './transactions/transactions.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
+import { PortfolioComponent } from './user-port/portfolio/portfolio.component';
 import { HomePageComponent } from './home-page/home-page.component';
 
 
