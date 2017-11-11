@@ -5,17 +5,17 @@
 
 export const environment = {
   production: false,
-  userLogin: 'http://localhost:3000/auth/login',
-  userSignup: 'http://localhost:3000/users/signup',
-  userProfile: 'http://localhost:3000/users/profile',
-  userLogout: 'http://localhost:3000/auth/logout',
-  userDelete: 'http://localhost:3000/users',
-  userBalance: 'http://localhost:3000/users/balance',
-  cryptoSearch: 'http://localhost:3000/currency',
-  portfolio: 'http://localhost:3000/currency/portfolio',
-  transaction: 'http://localhost:3000/transactions',
-  tracking: 'http://localhost:3000/currency/tracking',
-  cryptocurrency: 'http://localhost:3000/currency',
+  userLogin: 'https://cryptocurrency-tracker-backend.herokuapp.com/auth/login',
+  userSignup: 'https://cryptocurrency-tracker-backend.herokuapp.com/users/signup',
+  userProfile: 'https://cryptocurrency-tracker-backend.herokuapp.com/users/profile',
+  userLogout: 'https://cryptocurrency-tracker-backend.herokuapp.com/auth/logout',
+  userDelete: 'https://cryptocurrency-tracker-backend.herokuapp.com/users',
+  userBalance: 'https://cryptocurrency-tracker-backend.herokuapp.com/users/balance',
+  cryptoSearch: 'https://cryptocurrency-tracker-backend.herokuapp.com/currency',
+  portfolio: 'https://cryptocurrency-tracker-backend.herokuapp.com/currency/portfolio',
+  transaction: 'https://cryptocurrency-tracker-backend.herokuapp.com/transactions',
+  tracking: 'https://cryptocurrency-tracker-backend.herokuapp.com/currency/tracking',
+  cryptocurrency: 'https://cryptocurrency-tracker-backend.herokuapp.com/currency',
   oneCryptoPt1: 'https://min-api.cryptocompare.com/data/pricemultifull?fsyms=',
   oneCryptoPt2: '&tsyms=USD'
 };

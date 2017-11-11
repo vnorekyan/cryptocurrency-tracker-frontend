@@ -21,3 +21,10 @@ i {
   opacity: 0.5;
 }
 
+.nav-icon {
+  text-align: center;
+}
+
+.icon {
+  text-shadow: 0 6px 10px rgba(0, 0, 0, 1);
+}

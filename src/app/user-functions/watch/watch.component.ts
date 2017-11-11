@@ -29,7 +29,7 @@ export class WatchComponent implements OnInit {
 
   }
 
-  search(term: string): void {
+  search(term?: string): void {
     // console.log(term);
     this.searchTerms.next(term);
   }
@@ -40,7 +40,7 @@ export class WatchComponent implements OnInit {
   }
 
   update(value, symbol, id) {
-    
+
     this.clicked = false;
     console.log('value before button click' + this.cryptoName);
     this.crypto.symbol = symbol;
@@ -67,6 +67,7 @@ export class WatchComponent implements OnInit {
       .subscribe(
       data => {
         console.log('tracking', data);
+        this.router.navigate(['/user/tracking']);
       },
       error => {
         this.alertService.error(error);
